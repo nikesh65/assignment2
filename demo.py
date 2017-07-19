@@ -12,10 +12,10 @@ cursor.execute('SET sql_notes=0;')
 cursor.execute("create table IF NOT EXISTS employee_data(ename VARCHAR(20),eemail VARCHAR(30),company VARCHAR(20),enumber NUMERIC)")
 
 #insert data
-cursor.execute("insert into employee_data VALUES ('sandeep','san@gmail.com','google',9784563210)")
+cursor.execute("insert into employee_data VALUES ('nikesh','nik@gmail.com','google',9784563210)")
 
 # update data
-cursor.execute("update employee_data set ename='sandeep1' where ename='sandeep'")
+cursor.execute("update employee_data set ename='nikesh1' where ename='nikesh'")
 
 # select data
 cursor.execute("select * from employee_data")
@@ -24,7 +24,7 @@ for i in result:
     print i
 
 # delete data
-cursor.execute("delete from employee_data where ename='sweety'")
+cursor.execute("delete from employee_data where ename='sandeep'")
 
 db.commit()
 db.close()
